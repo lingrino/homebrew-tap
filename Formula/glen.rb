@@ -2,9 +2,18 @@
 class Glen < Formula
   desc "A CLI to export GitLab project and group variables"
   homepage ""
-  url "https://github.com/lingrino/glen/releases/download/v1.0.0/glen_1.0.0_Darwin_x86_64.tar.gz"
-  version "1.0.0"
-  sha256 "bbba22e35893337390741cbcb77ab1db8ff6f33074c336c818e5d50775e59b3c"
+  version "1.1.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/lingrino/glen/releases/download/v1.1.0/glen_1.1.0_Darwin_x86_64.tar.gz"
+    sha256 "183fca3c21a0fceb5f112d4b0d97a09c8e052c8b095031cded95154d3be025ce"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/lingrino/glen/releases/download/v1.1.0/glen_1.1.0_Linux_x86_64.tar.gz"
+      sha256 "16fd5c15af087bf657710ce9589b9af6a68a68a00358c076e1ddd9b2c58d3994"
+    end
+  end
   
   depends_on "git"
 
