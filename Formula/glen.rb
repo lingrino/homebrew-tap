@@ -2,20 +2,18 @@
 class Glen < Formula
   desc "A CLI to export GitLab project and group variables"
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lingrino/glen/releases/download/v1.1.0/glen_1.1.0_Darwin_x86_64.tar.gz"
-    sha256 "183fca3c21a0fceb5f112d4b0d97a09c8e052c8b095031cded95154d3be025ce"
+    url "https://github.com/lingrino/glen/releases/download/v1.1.1/glen_1.1.1_Darwin_x86_64.tar.gz"
+    sha256 "ece6d38f5962ca780cbe503dfacd6307de800be245ce07239d1aed5bdf786b35"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.1.0/glen_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "16fd5c15af087bf657710ce9589b9af6a68a68a00358c076e1ddd9b2c58d3994"
+      url "https://github.com/lingrino/glen/releases/download/v1.1.1/glen_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "5a3f201c9e59738ee53ea1e5da440dd3aa3b4c42946f30d7c52fdaa5d58de4dd"
     end
   end
-  
-  depends_on "git"
 
   def install
     bin.install "glen"
