@@ -2,16 +2,16 @@
 class Vaku < Formula
   desc "A CLI and Go API to extend the official Vault client"
   homepage "https://vaku.dev/"
-  version "1.5.0"
+  version "1.5.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lingrino/vaku/releases/download/v1.5.0/vaku_1.5.0_Darwin_x86_64.tar.gz"
-    sha256 "5be0713aaa71ac2d402f6d973f3f31adc32392d7b07278f2d1575af91c284979"
+    url "https://github.com/lingrino/vaku/releases/download/v1.5.1/vaku_1.5.1_Darwin_x86_64.tar.gz"
+    sha256 "95c4069f7efc3502c94e6d62566e63451ed2014c691ab7fea7fdc064b361b2be"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/vaku/releases/download/v1.5.0/vaku_1.5.0_Linux_x86_64.tar.gz"
-      sha256 "d088d237582e5362e734dafbb727ccbc87c3b6ebdc8d945c574a15b18c066be0"
+      url "https://github.com/lingrino/vaku/releases/download/v1.5.1/vaku_1.5.1_Linux_x86_64.tar.gz"
+      sha256 "350163e564f286e9c01ca1ec910a3497ee1abadad35fe82fa328a221edd18056"
     end
   end
   
