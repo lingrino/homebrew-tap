@@ -2,24 +2,24 @@
 class Glen < Formula
   desc "A CLI to gather GitLab project and group variables"
   homepage "https://lingrino.com/"
-  version "1.2.0"
+  version "1.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lingrino/glen/releases/download/v1.2.0/glen_1.2.0_mac_x86_64.zip"
-    sha256 "cbe1151b572f2a5c9ff6131b04cce3133fa68581e11ca4b13b426503b9770132"
+    url "https://github.com/lingrino/glen/releases/download/v1.3.0/glen_1.3.0_mac_x86_64.zip"
+    sha256 "14a059c1691c4ecaa662a1d763988d56957b44753330236e0a839af59b17f947"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.2.0/glen_1.2.0_linux_x86_64.zip"
-      sha256 "4c41c1e3db93073e6561ef06ee473b6f5f6b9a20ee5569b4139cf62860b68201"
+      url "https://github.com/lingrino/glen/releases/download/v1.3.0/glen_1.3.0_linux_x86_64.zip"
+      sha256 "dc8e685efe29de45f9c60790896d7ca2246a943c650a42aeba990f6d98e788bb"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/glen/releases/download/v1.2.0/glen_1.2.0_linux_arm64.zip"
-        sha256 "a95c9c86b7eeaafa7e2efb4d34f0887202dbe130853f48fd34af19bab92ad16b"
+        url "https://github.com/lingrino/glen/releases/download/v1.3.0/glen_1.3.0_linux_arm64.zip"
+        sha256 "21ddf6b876b6f4436b8ada998a22b6a343d6f174b04d5d89c18b44fbc78b49d7"
       else
-        url "https://github.com/lingrino/glen/releases/download/v1.2.0/glen_1.2.0_linux_armv6.zip"
-        sha256 "30a939592654f9955bf4240420bc1164076e284532d15957c76cf91257672a96"
+        url "https://github.com/lingrino/glen/releases/download/v1.3.0/glen_1.3.0_linux_armv6.zip"
+        sha256 "2ca38cec810d3c6476812df30063f258685e1fbfc5ea20bb3277617f3e9c0531"
       end
     end
   end
