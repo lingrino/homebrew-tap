@@ -7,19 +7,19 @@ class Vaku < Formula
 
   if OS.mac?
     url "https://github.com/lingrino/vaku/releases/download/v2.0.0/vaku_2.0.0_mac_x86_64.zip"
-    sha256 "ca8cd4bd2d5dd47cdaed76e2d22e073bfe7334d1ec4e1abf01a72fea388cfb1f"
+    sha256 "4382b274764796672f4979df3f2ba99bd984d01ac088c9a26f029dfc7c670985"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/lingrino/vaku/releases/download/v2.0.0/vaku_2.0.0_linux_x86_64.zip"
-      sha256 "eaace1d523c1df4cbb177c8afc89c7b864d1725a9966460fd32d9f0b640592ce"
+      sha256 "5ef0cb81b94c7287ce65314c5a687c41bacc33173b235e311a050076fe48da4e"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/lingrino/vaku/releases/download/v2.0.0/vaku_2.0.0_linux_arm64.zip"
-        sha256 "4a5dd8c0f1c1c24c611b244dfccd93760ffcef967d647720f5a26f81ad0463a2"
+        sha256 "4384055af5da54c65195033cd03092440ca1291a2a8cd49df033cebb0bbf966f"
       else
         url "https://github.com/lingrino/vaku/releases/download/v2.0.0/vaku_2.0.0_linux_armv6.zip"
-        sha256 "0a26f1df4ab958379decd71400447017915901aa4c3e2b181c4c979f6a549838"
+        sha256 "73e0935afdddad4da880c63640640e535d3bb97ec2fcd5b80a15de593302ce2a"
       end
     end
   end
