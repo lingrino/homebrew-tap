@@ -2,24 +2,24 @@
 class Cami < Formula
   desc "A CLI for cleaning up unused AWS AMIs."
   homepage "https://lingrino.com/"
-  version "1.0.2"
+  version "1.0.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lingrino/cami/releases/download/v1.0.2/cami_1.0.2_mac_x86_64.zip"
-    sha256 "70c25f155b0075c710c3f8032a0b642c24e4f25bc797c6c0978dbe1de8e40653"
+    url "https://github.com/lingrino/cami/releases/download/v1.0.3/cami_1.0.3_mac_x86_64.zip"
+    sha256 "a19f59ec228b98eae4fe5341839594d6cc5f13e471fd9cc48b31c89dbbdc7f82"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/cami/releases/download/v1.0.2/cami_1.0.2_linux_x86_64.zip"
-      sha256 "cc1765fc5dac3823c55957363dc1d80aa15ce579beea70e94e64ff3ee56f3f1e"
+      url "https://github.com/lingrino/cami/releases/download/v1.0.3/cami_1.0.3_linux_x86_64.zip"
+      sha256 "6bf3bdf63b856fba3553ac016fcd86c39336794c4803e752212d7583b5314888"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/cami/releases/download/v1.0.2/cami_1.0.2_linux_arm64.zip"
-        sha256 "d60beb274e583427c30b55e5fdfdaa0a782ca945d6ab9df63b626242075f6a99"
+        url "https://github.com/lingrino/cami/releases/download/v1.0.3/cami_1.0.3_linux_arm64.zip"
+        sha256 "e8dc33d9c45ebadc90c08eb2ec5031eaa8cb20cb39819278ecf03502b0adbd08"
       else
-        url "https://github.com/lingrino/cami/releases/download/v1.0.2/cami_1.0.2_linux_armv6.zip"
-        sha256 "400fe9c52bf4adf902de31c6dde1176539da96f2e966b1a15ef9510086a61032"
+        url "https://github.com/lingrino/cami/releases/download/v1.0.3/cami_1.0.3_linux_armv6.zip"
+        sha256 "213e1cab624045d5dafa0ff09b13263cc21831cb940e3652cb20ac3c5de27515"
       end
     end
   end
