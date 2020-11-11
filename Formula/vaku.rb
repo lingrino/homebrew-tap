@@ -2,24 +2,24 @@
 class Vaku < Formula
   desc "CLI that extends the official Vault client."
   homepage "https://vaku.dev/"
-  version "2.1.1"
+  version "2.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/lingrino/vaku/releases/download/v2.1.1/vaku_2.1.1_mac_x86_64.zip"
-    sha256 "b64870fd50b3f604b91d30fca02d6750be2961e48cdc867a0dfa2ce2842343ce"
+    url "https://github.com/lingrino/vaku/releases/download/v2.1.2/vaku_2.1.2_mac_x86_64.zip"
+    sha256 "9010c0182d80fe4e13f695ffd3f98f0908d6171a0a5ef02cf427c4a74f52e136"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/vaku/releases/download/v2.1.1/vaku_2.1.1_linux_x86_64.zip"
-      sha256 "724835169ed33d1e091d8c7afd2a8518893713acb62841550817d7f4295cbfdb"
+      url "https://github.com/lingrino/vaku/releases/download/v2.1.2/vaku_2.1.2_linux_x86_64.zip"
+      sha256 "cf03284d4984cab6d529d26d6ff5b908d86e1335a2aac98b5041c3b1645e8898"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/vaku/releases/download/v2.1.1/vaku_2.1.1_linux_arm64.zip"
-        sha256 "cdfb34d148c0c610ce15a84ad3ed2af48ee343e19c9ea76419b7d715acd0c6b1"
+        url "https://github.com/lingrino/vaku/releases/download/v2.1.2/vaku_2.1.2_linux_arm64.zip"
+        sha256 "d9c7dec6162af588b71560e5e3ac02b9044c3a3739b0c8f1c265857c9d59db09"
       else
-        url "https://github.com/lingrino/vaku/releases/download/v2.1.1/vaku_2.1.1_linux_armv6.zip"
-        sha256 "1075256b9081e2d2dbf5254e436c37fa1e2b888e598024a3a592e30aafd8edec"
+        url "https://github.com/lingrino/vaku/releases/download/v2.1.2/vaku_2.1.2_linux_armv6.zip"
+        sha256 "f2273590d1334395a00d67ab1693a692d177bea7b5e7d08467ed73ced3086359"
       end
     end
   end
