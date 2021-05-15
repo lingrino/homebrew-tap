@@ -5,28 +5,28 @@
 class Vaku < Formula
   desc "CLI that extends the official Vault client."
   homepage "https://vaku.dev/"
-  version "2.2.0"
+  version "2.2.1"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/lingrino/vaku/releases/download/v2.2.0/vaku_2.2.0_mac_x86_64.zip"
-    sha256 "1c3e83c4f9961261e39b154f7e4cd170b152a44fd90794abad07949891265773"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/lingrino/vaku/releases/download/v2.2.1/vaku_2.2.1_mac_x86_64.zip"
+    sha256 "00cc32ef5d007e95d013475f196cc1b145578f7bb4a789fcdbb6d0fc6e79eb46"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/lingrino/vaku/releases/download/v2.2.0/vaku_2.2.0_mac_arm64.zip"
-    sha256 "61ca803e14e0e84aa7d998c2c000c3b321f2db712d0b13e931e125709de1b00f"
+    url "https://github.com/lingrino/vaku/releases/download/v2.2.1/vaku_2.2.1_mac_arm64.zip"
+    sha256 "c06f3897ca5fa24939cb3c2c0014e73895ccdddd4bb5ca13928060846116e38d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lingrino/vaku/releases/download/v2.2.0/vaku_2.2.0_linux_x86_64.zip"
-    sha256 "57bd0abb9fad43caf4555c12d27346e98febab1af5f1b073915a9f3f28b0a6f8"
+    url "https://github.com/lingrino/vaku/releases/download/v2.2.1/vaku_2.2.1_linux_x86_64.zip"
+    sha256 "fdf42b4641c6a0cda9c444b14f33bd12c232b3451e6839b24c77b799c96f2704"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lingrino/vaku/releases/download/v2.2.0/vaku_2.2.0_linux_armv6.zip"
-    sha256 "9817219f7644186df726953b693c9c6bbb6aaf0095422cf0d59ad4be8c3fe57b"
+    url "https://github.com/lingrino/vaku/releases/download/v2.2.1/vaku_2.2.1_linux_armv6.zip"
+    sha256 "f53674f2f2ffe32965d31619a26768db2184c1a6d5a75cd6b5df29ae86745b66"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lingrino/vaku/releases/download/v2.2.0/vaku_2.2.0_linux_arm64.zip"
-    sha256 "d2feaf8a4b398abbfffd78a6ed2e78b42c803aed2cc40226019ab9dbc0af6fcb"
+    url "https://github.com/lingrino/vaku/releases/download/v2.2.1/vaku_2.2.1_linux_arm64.zip"
+    sha256 "dcf7ec69548b50edeed95819436bf2ecbd9c3304ab557f76e2e3591534b927cf"
   end
 
   def install
