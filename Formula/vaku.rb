@@ -5,28 +5,33 @@
 class Vaku < Formula
   desc "CLI that extends the official Vault client."
   homepage "https://vaku.dev/"
-  version "2.3.0"
+  version "2.4.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/lingrino/vaku/releases/download/v2.3.0/vaku_2.3.0_mac_x86_64.zip"
-    sha256 "cdfc549a229623f5527f7aa8a1702855f37f8bf857f95d9ab2f30559f85d903f"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/lingrino/vaku/releases/download/v2.4.0/vaku_2.4.0_mac_x86_64.zip"
+      sha256 "4514331a29c1b6e1b0e2610aa7b027ce7302ee8bcfb6bad67e6e0b840b4fe2b7"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/lingrino/vaku/releases/download/v2.4.0/vaku_2.4.0_mac_arm64.zip"
+      sha256 "389e1d120f839f0110a0faaff8f708039a71fbe5cb777833f0190533e82d90a2"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/lingrino/vaku/releases/download/v2.3.0/vaku_2.3.0_mac_arm64.zip"
-    sha256 "d631530df9066009960c5543a3a2214142d2b5cd1aec635e8574235d5e212184"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lingrino/vaku/releases/download/v2.3.0/vaku_2.3.0_linux_x86_64.zip"
-    sha256 "2965430abff0d8faefbd8f5fcf25e48ed7746b21c9f4e0248b340f93208f81d5"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lingrino/vaku/releases/download/v2.3.0/vaku_2.3.0_linux_armv6.zip"
-    sha256 "eb4d619c65c2acf63f2f833424db948c47350da87f9aef55c7ee2c444522847d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lingrino/vaku/releases/download/v2.3.0/vaku_2.3.0_linux_arm64.zip"
-    sha256 "1d7d3b77e51e6ccef4eb5640cf1361a159b4cd3285e2b2d130d2e245acf100c7"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/lingrino/vaku/releases/download/v2.4.0/vaku_2.4.0_linux_x86_64.zip"
+      sha256 "3b19de7028be492fb0c9c7588e793898399837eac07ccc9ca713cd1b226f0934"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/lingrino/vaku/releases/download/v2.4.0/vaku_2.4.0_linux_armv6.zip"
+      sha256 "c491a43f838fed4a339147363d942f3b254c447e05972d10d55f00470b07c4ec"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lingrino/vaku/releases/download/v2.4.0/vaku_2.4.0_linux_arm64.zip"
+      sha256 "82b7f5b9b6307caa2aa4bbe3bbc0659c287fef7a90b6fe03ce7710b1da9dd576"
+    end
   end
 
   def install
