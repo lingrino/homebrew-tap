@@ -5,32 +5,32 @@
 class Glen < Formula
   desc "A CLI to gather GitLab project and group variables."
   homepage "https://lingrino.com/"
-  version "1.5.0"
+  version "1.5.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.5.0/glen_1.5.0_mac_x86_64.zip"
-      sha256 "080f06ff9e6e0d70c513d2e89183f03e7c66dab7ceda8795621f6b49dbb47056"
+      url "https://github.com/lingrino/glen/releases/download/v1.5.1/glen_1.5.1_mac_x86_64.zip"
+      sha256 "ef5449512ef5eabb4c07798469dc35a40f577cec0fbcaf7a1760f35e14893fb5"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lingrino/glen/releases/download/v1.5.0/glen_1.5.0_mac_arm64.zip"
-      sha256 "9b91e13411e97555266cc8b30536b26cac50ccee20c96ed7caec5b3aa341f6b9"
+      url "https://github.com/lingrino/glen/releases/download/v1.5.1/glen_1.5.1_mac_arm64.zip"
+      sha256 "d6fc84b3f2d0ef21693bc3a94d8130c6a3ec4d80025e6a1c8a2bbf4a3e9da255"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.5.0/glen_1.5.0_linux_x86_64.zip"
-      sha256 "d211e638ce243a2dde8b5de47541b3acb8bc49090d4b12e9190171f4f29ef6fe"
+      url "https://github.com/lingrino/glen/releases/download/v1.5.1/glen_1.5.1_linux_x86_64.zip"
+      sha256 "9be5182a931b90198e4200f0293867b506f1edd3aacd91457b75a092ace44edc"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/glen/releases/download/v1.5.0/glen_1.5.0_linux_armv6.zip"
-      sha256 "e3c5a48a5369377d8d87cec8c32bc007430c90eee08a7d4740872e695b6b14ab"
+      url "https://github.com/lingrino/glen/releases/download/v1.5.1/glen_1.5.1_linux_armv6.zip"
+      sha256 "e3800ea3ca7c33d16019f198e36dda509bca87141b4d7259f42654febcf7b26c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/glen/releases/download/v1.5.0/glen_1.5.0_linux_arm64.zip"
-      sha256 "d3de1216061c19b55583990dbde8ada0d4ba58f2670af7583331ee8b5d2adbc5"
+      url "https://github.com/lingrino/glen/releases/download/v1.5.1/glen_1.5.1_linux_arm64.zip"
+      sha256 "2004dc58e0f0d2329fad94b4d80f6d5f899aa92500a6b27d3669ae1d70247b35"
     end
   end
 
