@@ -5,20 +5,20 @@
 class Cami < Formula
   desc "A CLI for cleaning up unused AWS AMIs."
   homepage "https://lingrino.com/"
-  version "1.3.3"
+  version "1.3.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lingrino/cami/releases/download/v1.3.3/cami_1.3.3_mac_arm64.zip"
-      sha256 "6557be8621fa05012da008c65028afacaba9f9159d0cb3a4be43e4c377205efe"
+      url "https://github.com/lingrino/cami/releases/download/v1.3.4/cami_1.3.4_mac_arm64.zip"
+      sha256 "1521601a520453ca58cf6bde44504bde2dc58e0981f0fb1d0f907f5a253a2208"
 
       def install
         bin.install "cami"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/cami/releases/download/v1.3.3/cami_1.3.3_mac_x86_64.zip"
-      sha256 "796271f1353dc399c8ccb3a24c02e2aa7468e518d670400b8459ddecefca0348"
+      url "https://github.com/lingrino/cami/releases/download/v1.3.4/cami_1.3.4_mac_x86_64.zip"
+      sha256 "d76a7b3785086cce6d0f744fe8bb7b387486181d95a8ed610a920718757ce0eb"
 
       def install
         bin.install "cami"
@@ -27,25 +27,25 @@ class Cami < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/cami/releases/download/v1.3.3/cami_1.3.3_linux_arm64.zip"
-      sha256 "0ccca71dae9f8c96dcc18a7e87b07877bc7c764a89a9648d2f731f7c748dff34"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/lingrino/cami/releases/download/v1.3.4/cami_1.3.4_linux_armv6.zip"
+      sha256 "355a617df471e6081d59df3adab4593429042cabfd62de9c0270f1b3744765e6"
 
       def install
         bin.install "cami"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lingrino/cami/releases/download/v1.3.3/cami_1.3.3_linux_x86_64.zip"
-      sha256 "0a245612b87b393f9da7d06cb3d607c18fb092d6b40ba90fdb0b845a275bebf5"
+      url "https://github.com/lingrino/cami/releases/download/v1.3.4/cami_1.3.4_linux_x86_64.zip"
+      sha256 "0a89f27bd6d0aed8d8e6a1447780d5d6c96e40de722f70afa5c51664211bfc56"
 
       def install
         bin.install "cami"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/cami/releases/download/v1.3.3/cami_1.3.3_linux_armv6.zip"
-      sha256 "29dd0a3b84b3925b336df0680873f98c6257990d32dec1b3afefd932edfe8786"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lingrino/cami/releases/download/v1.3.4/cami_1.3.4_linux_arm64.zip"
+      sha256 "25dc3f1e8d9b2c40cbcfe2d5a2a1d598dc78957f58460e71e58087bde06a3c2f"
 
       def install
         bin.install "cami"
