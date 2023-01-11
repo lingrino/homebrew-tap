@@ -5,20 +5,20 @@
 class Glen < Formula
   desc "A CLI to gather GitLab project and group variables."
   homepage "https://lingrino.com/"
-  version "1.7.1"
+  version "1.8.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lingrino/glen/releases/download/v1.7.1/glen_1.7.1_mac_arm64.zip"
-      sha256 "29ebfba62ff3595d8a668dbd222982898dd23edefaa3329069be31e6e3ba7b65"
+    if Hardware::CPU.intel?
+      url "https://github.com/lingrino/glen/releases/download/v1.8.0/glen_1.8.0_darwin_amd64.zip"
+      sha256 "0175b023f0f6e6961e2382812adf28db3fe48ba200a6680f3be04da78ac11751"
 
       def install
         bin.install "glen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.7.1/glen_1.7.1_mac_x86_64.zip"
-      sha256 "7f5f566e435134704666b6a435487288a10eaa81f191395f11795c99f6a10ae0"
+    if Hardware::CPU.arm?
+      url "https://github.com/lingrino/glen/releases/download/v1.8.0/glen_1.8.0_darwin_arm64.zip"
+      sha256 "bb0858c7bc0ace856c7c254d28b4c5b330f09d77e89aaebd83a84ec84c9baf40"
 
       def install
         bin.install "glen"
@@ -27,25 +27,25 @@ class Glen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/lingrino/glen/releases/download/v1.7.1/glen_1.7.1_linux_x86_64.zip"
-      sha256 "04e10d93ee625adc3a1088961a87ceb2f1c9cb23c3977553a307c603a77f98d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lingrino/glen/releases/download/v1.8.0/glen_1.8.0_linux_arm64.zip"
+      sha256 "836bf0bfb3c65bef28671f2586822c124b2fe3d5a66ad44e0dab77035dee75a3"
 
       def install
         bin.install "glen"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/glen/releases/download/v1.7.1/glen_1.7.1_linux_arm64.zip"
-      sha256 "086554df883ae53f0770007f1f0bb3e65d65099ebca0283a56ff528814fde8dc"
+    if Hardware::CPU.intel?
+      url "https://github.com/lingrino/glen/releases/download/v1.8.0/glen_1.8.0_linux_amd64.zip"
+      sha256 "2c56e1d67458863989882edc284fb59cd73129f44121d9dd6c0de50ab73b9a30"
 
       def install
         bin.install "glen"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lingrino/glen/releases/download/v1.7.1/glen_1.7.1_linux_armv6.zip"
-      sha256 "69b530996bda0a6898e70128f8059ae2a89e6fb7058f1be853d4cb0a046aa30e"
+      url "https://github.com/lingrino/glen/releases/download/v1.8.0/glen_1.8.0_linux_armv6.zip"
+      sha256 "818ef8cc84d994f4afa902700b7e87f90efa27eef4f874952cb6e8e2e4188b91"
 
       def install
         bin.install "glen"
