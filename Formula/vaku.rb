@@ -5,20 +5,20 @@
 class Vaku < Formula
   desc "CLI that extends the official Vault client."
   homepage "https://vaku.dev/"
-  version "2.8.0"
+  version "2.8.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/lingrino/vaku/releases/download/v2.8.0/vaku_2.8.0_darwin_amd64.zip"
-      sha256 "93a8d2d55e8e034e4e0801a647e14421a87cf8686d668f6de979ab83a05bc3af"
+      url "https://github.com/lingrino/vaku/releases/download/v2.8.1/vaku_2.8.1_darwin_amd64.zip"
+      sha256 "f08764a57427caa6e16ba1523c6afb5c3c6622fa2f99698074cc96bce3e59899"
 
       def install
         bin.install "vaku"
       end
     end
     on_arm do
-      url "https://github.com/lingrino/vaku/releases/download/v2.8.0/vaku_2.8.0_darwin_arm64.zip"
-      sha256 "5f98c072f89999adbd3ae2f0a7a8aa421e9e2449272c528aa508ac74f883c73c"
+      url "https://github.com/lingrino/vaku/releases/download/v2.8.1/vaku_2.8.1_darwin_arm64.zip"
+      sha256 "335945f56468a9bd047774ceab5dda8c28bbd1d6a1a19c9c279d04237801be4f"
 
       def install
         bin.install "vaku"
@@ -29,8 +29,8 @@ class Vaku < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/vaku/releases/download/v2.8.0/vaku_2.8.0_linux_amd64.zip"
-        sha256 "c8b0450f48be574989d7a69f09c2da357c9fc4b96ff52afca84a64d77fe69f87"
+        url "https://github.com/lingrino/vaku/releases/download/v2.8.1/vaku_2.8.1_linux_amd64.zip"
+        sha256 "44146645dce861380026b1c27e7f77c512e2c3622c59a37f5ad8a8410197ab71"
 
         def install
           bin.install "vaku"
@@ -39,8 +39,8 @@ class Vaku < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/vaku/releases/download/v2.8.0/vaku_2.8.0_linux_armv6.zip"
-        sha256 "581d419d5693a4b4503da857748e70a80f961c9ecf9aa1411db448602c5c6fff"
+        url "https://github.com/lingrino/vaku/releases/download/v2.8.1/vaku_2.8.1_linux_armv6.zip"
+        sha256 "e03eddb79c40856c3bb622af08a5871e23983d71da5fc5a928f5669855049404"
 
         def install
           bin.install "vaku"
@@ -49,8 +49,8 @@ class Vaku < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lingrino/vaku/releases/download/v2.8.0/vaku_2.8.0_linux_arm64.zip"
-        sha256 "54bce8c1023bf643ad07b6d835f6e691981e3b29b7ee592377f47dfc18b8561a"
+        url "https://github.com/lingrino/vaku/releases/download/v2.8.1/vaku_2.8.1_linux_arm64.zip"
+        sha256 "189940ad7d1441b1a7961b68747caaa3f253eb4201e7d21abcd3c95531acea4f"
 
         def install
           bin.install "vaku"
