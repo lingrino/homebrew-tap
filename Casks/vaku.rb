@@ -3,7 +3,7 @@ cask "vaku" do
   name "vaku"
   desc "CLI that extends the official Vault client."
   homepage "https://vaku.dev/"
-  version "2.9.0"
+  version "2.10.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "vaku" do
   on_macos do
     on_intel do
       url "https://github.com/lingrino/vaku/releases/download/v#{version}/vaku_#{version}_darwin_amd64.zip"
-      sha256 "65faf699b0d046c1da67613c71f72915a87e6314dd961be44cc0f6a0ffb779f0"
+      sha256 "013254be59f6fca78a516c0181dceead840457f598350577777456894d4a4db6"
     end
     on_arm do
       url "https://github.com/lingrino/vaku/releases/download/v#{version}/vaku_#{version}_darwin_arm64.zip"
-      sha256 "b0a5b989076cb7f9352b230b6a33e4dce9821b548684307afddc573c1a5b90af"
+      sha256 "ef00d66c4c39b4404ee155c6f73aca4503bea07a243e391cb5457959d529839b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/lingrino/vaku/releases/download/v#{version}/vaku_#{version}_linux_amd64.zip"
-      sha256 "063ae3e2b00fedc54cea9fe72585fc714ef8f63adae08c27d3d2ee9c68408599"
+      sha256 "897ea1edd6db723b712ae38a3786db76e4fcb5d31b576eae8f9a005d49f139ab"
     end
     on_arm do
       url "https://github.com/lingrino/vaku/releases/download/v#{version}/vaku_#{version}_linux_arm64.zip"
-      sha256 "254b566a0edd994e1020665dd1b87413e20a57cc96bdc23c05690b6031b2e6c1"
+      sha256 "a8c6e1ba02bfc829f2619647fc7a2487d17fbc20efecb1c1342bf45d26c5c0a4"
     end
   end
 
