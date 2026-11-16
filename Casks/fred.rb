@@ -1,6 +1,6 @@
 cask "fred" do
-  version "0.0.41"
-  sha256 "08d2b40b1fe29e72abd90252b37e072acdf13156cc77fa2148b5ea76476cd989"
+  version "0.0.43"
+  sha256 "3a1c7b57b21796a1469ba552dfc70738327d1a5886f16792c76d6d203dd9de42"
 
   url "https://github.com/lingrino/fred/releases/download/v#{version}/Fred-#{version}.zip"
   name "Fred"
