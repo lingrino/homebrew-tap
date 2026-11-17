@@ -1,6 +1,6 @@
 cask "fred" do
-  version "0.0.44"
-  sha256 "b25860df95d3b7470d78d40175bdb63f62fb5d711131a0d7e8495a3108b3558b"
+  version "0.0.45"
+  sha256 "dc778b4230fa9e6248e3249ea43cc69cee6737626aaf4e9f5e299575c774d854"
 
   url "https://github.com/lingrino/fred/releases/download/v#{version}/Fred-#{version}.zip"
   name "Fred"
@@ -10,6 +10,10 @@ cask "fred" do
   depends_on arch: :arm64
 
   app "Fred.app"
+
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-d", "-r", "com.apple.quarantine", "{{appdir}}/Fred.app"]
+  end
 
   zap trash: "~/Library/Application Support/Fred"
 end
