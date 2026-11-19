@@ -11,9 +11,5 @@ cask "fred" do
 
   app "Fred.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-d", "-r", "com.apple.quarantine", "{{appdir}}/Fred.app"]
-  end
-
   zap trash: "~/Library/Application Support/Fred"
 end
