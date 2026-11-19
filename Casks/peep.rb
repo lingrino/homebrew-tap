@@ -1,6 +1,6 @@
 cask "peep" do
-  version "0.0.73"
-  sha256 "24050a32a737b08da60f9fd0a5f46f008bff6066381dabd53e22b815c5e922f9"
+  version "0.0.74"
+  sha256 "2431b105a6c51a6bcd816378b8d1f6a598abbb6f412169e1c4e257ce705c662d"
 
   url "https://github.com/lingrino/peep/releases/download/v#{version}/Peep-#{version}.zip"
   name "Peep"
