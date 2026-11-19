@@ -11,9 +11,5 @@ cask "peep" do
 
   app "Peep.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-d", "-r", "com.apple.quarantine", "{{appdir}}/Peep.app"]
-  end
-
   zap launchctl: "com.lingrino.peep.agent"
 end
