@@ -1,6 +1,6 @@
 cask "remotetv" do
-  version "0.0.19"
-  sha256 "c07dc233d56139097f3bea182a51d709077fe201480f73de52ed19f798fae6cb"
+  version "0.0.20"
+  sha256 "2b04a5360bd6353f836ec8dc1d268439ed2a7694562386d6567022b1fc364e54"
 
   url "https://github.com/lingrino/remotetv/releases/download/v#{version}/RemoteTV-#{version}.zip"
   name "RemoteTV"
