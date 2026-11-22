@@ -1,6 +1,6 @@
 cask "autotouch" do
-  version "0.0.8"
-  sha256 "575c8aa4d70123e68c73bba84f2793d692a2187a9504d867d630fa975a3fc9a5"
+  version "0.0.9"
+  sha256 "6342917bc1c3960dd7b1f55b846c4561913f58414ebcbd5a6db6c2c0251dcd85"
 
   url "https://github.com/lingrino/autotouch/releases/download/v#{version}/Autotouch-#{version}.zip"
   name "Autotouch"
